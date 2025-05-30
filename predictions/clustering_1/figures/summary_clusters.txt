@@ -1,0 +1,7 @@
+,Cluster ID,Freq of Sessions,# of Drivers,Plug-In Time (Mean Value),Parking Time (Mean Value),Energy (Mean [kWh])
+0,Cluster 0,1.127,262,14h47,10h31,2.1
+1,Cluster 1,1.093,163,14h41,11h15,2.26
+2,Cluster 2,1.118,131,14h45,10h38,3.94
+3,Cluster 3,1.121,138,15h06,10h46,2.33
+4,Cluster 4,1.166,150,14h50,9h46,2.26
+5,Cluster 5,1.123,162,14h27,10h14,2.21
