@@ -3,6 +3,7 @@
 This repository contains the codebase developed for a Master's Thesis focused on optimizing smart charging behavior of electric vehicles (EVs) within renewable energy communities (RECs). The project models EV energy flows, predicts energy needs and charging behaviors, and implements smart charging strategies to enhance community self-sufficiency. The final phase involves simulating various charging and discharging scenarios to maximize the self-consumption of renewable energy.
 ## Table of Contents
 - [Installation](#installation)
+- [Datasets](#datasets)
 - [Project Structure](#project-structure)
 - [Simulations](#simulations)
 - [Running Simulations](#run-the-simulations)
@@ -29,6 +30,15 @@ This repository contains the codebase developed for a Master's Thesis focused on
     ```
 Note : a previous version of Pandas needs to be used as the current one is not compatible with the package `emobpy`. 
 This third step is then very important.
+## Datasets 
+
+The raw dataset containing the charging sessions used in the prediction module as well as the clustered sessions and drivers dataset can be found at <https://dataverse.uclouvain.be/dataset.xhtml?persistentId=doi:10.14428/DVN/6GUFM9&version=DRAFT>. 
+
+The `charging_sessions.csv` dataset needs to be put in the `predictions\data\` folder. 
+The `val_ev_data.csv` dataset needs to be put in the `predictions\data\` folder.
+The `charging_sessions_clustered.csv` dataset needs to be put in the `simulations\data\` folder.
+The `EV_1year/` folder needs to be put in the `simulations\data_ev\` folder.
+
 ## Project structure 
 
 - `datasets_generation/`: jupyter notebooks and modified data files from `emobpy` package used for the generation of the datasets
@@ -52,6 +62,7 @@ This third step is then very important.
 ## Simulations
 
 ### Directory structure
+- `data/`: clustered sessions and drivers dataset
 - `data_ev/` : contains the data of the EVs used for the simulations 
 - `data_REC/` : contains the data of the REC used for the simulations
 - `models/` : contains the EV objects and charging recommendations algorithm 
