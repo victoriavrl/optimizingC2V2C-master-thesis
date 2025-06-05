@@ -31,8 +31,9 @@ This repository contains the codebase developed for a Master's Thesis focused on
 Note : a previous version of Pandas needs to be used as the current one is not compatible with the package `emobpy`. 
 This third step is then very important.
 ## Datasets 
+The synthetic electric vehicle datasets used in this project were generated using the open-source Python tool `emobpy`, which simulates realistic EV mobility and charging behavior based on empirical mobility statistics, vehicle specifications, and customizable driver profiles. A total of 1316 EV profiles were created, split across three datasets for training, validation, and simulation purposes. Two sets of behavioral rules were used: the user-defined set (requiring a minimum of 3 hours per day at a workplace) and a custom commuter set (requiring at least 6 hours every weekday at a workplace). The empirical mobility statistics were taken from a German study [1] which introduced the `emobpy` tool. Probabilities for charger availability were set to 100% at home and workplace locations, and EV models were selected randomly from a predefined pool of 98 vehicle types provided by emobpy. The generated timeseries include mobility patterns, electricity consumption, grid availability, and actual grid demand, with a 15-minute time resolution over one year. Postprocessing computed session-level indicators such as plug-in/out time, energy charged, state of charge (SoC), charging durations, and inter-session metrics like energy, distance, and hours between sessions (CBS, DBS, HBS). 
 
-The raw dataset containing the charging sessions used in the prediction module as well as the clustered sessions and drivers dataset can be found at <https://dataverse.uclouvain.be/dataset.xhtml?persistentId=doi:10.14428/DVN/6GUFM9&version=DRAFT>. 
+The datasets can be found at <https://doi.org/10.14428/DVN/6GUFM9>. 
 
 The `charging_sessions.csv` dataset needs to be put in the `predictions\data\` folder. 
 The `val_ev_data.csv` dataset needs to be put in the `predictions\data\` folder.
@@ -112,3 +113,7 @@ pytest tests.py
 Tests validate the results of previous simulations.
 Therefore, you must run at least one simulation before executing the tests.
 Running tests before any simulation will result in failures.
+
+## References
+
+[1] Gaete-Morales, Carlos, et al. "An open tool for creating battery-electric vehicle time series from empirical data, emobpy." Scientific data 8.1 (2021): 152.
